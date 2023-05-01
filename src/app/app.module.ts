@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TuiAlertModule, TuiDialogModule, TuiRootModule } from '@taiga-ui/core';
 
 import { AppComponent } from './app.component';
+import { ExchangeRatesModule } from './exchange-rates/exchange-rates.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -13,6 +14,7 @@ import { AppComponent } from './app.component';
     TuiRootModule,
     TuiDialogModule,
     TuiAlertModule,
+    ExchangeRatesModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

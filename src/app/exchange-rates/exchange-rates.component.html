@@ -1,0 +1,18 @@
+<div class="container">
+  <h1 class="header">Курсы валют онлайн</h1>
+
+  <div class="controls">
+    <div>
+      <h3>Currency {{ baseCurrency }}</h3>
+      <span>{{ timestamp | date: 'short' }}</span>
+    </div>
+    <button
+      [appearance]="expanded ? 'secondary' : 'primary'"
+      (click)="toggle()"
+      tuiButton
+      type="button"
+      size="xs"
+      >{{ expanded ? '-' : '+' }}
+    </button>
+  </div>
+</div>
