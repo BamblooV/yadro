@@ -33,6 +33,8 @@
     "@angular-eslint/template-parser": "15.2.1",
     "@angular/cli": "~15.2.5",
     "@angular/compiler-cli": "^15.2.0",
+    "@commitlint/cli": "^17.6.1",
+    "@commitlint/config-angular": "^17.6.1",
     "@tinkoff/eslint-config": "^1.52.1",
     "@tinkoff/eslint-config-angular": "^1.53.2",
     "@tinkoff/prettier-config": "^1.52.1",
@@ -50,5 +52,10 @@
     "lint-staged": "^13.2.2",
     "prettier": "^2.8.8",
     "typescript": "~4.9.4"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "npx --no-install commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }
