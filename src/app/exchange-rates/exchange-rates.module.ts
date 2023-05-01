@@ -1,14 +1,23 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { TuiButtonModule, TuiDataListModule } from '@taiga-ui/core';
+import {
+  TuiButtonModule,
+  TuiDataListModule,
+  TuiSvgModule,
+} from '@taiga-ui/core';
 import { TuiDataListWrapperModule, TuiSelectModule } from '@taiga-ui/kit';
 
 import { CurrencyFormComponent } from './currency-form/currency-form.component';
+import { CurrencyItemComponent } from './currency-item/currency-item.component';
 import { ExchangeRatesComponent } from './exchange-rates.component';
 
 @NgModule({
-  declarations: [ExchangeRatesComponent, CurrencyFormComponent],
+  declarations: [
+    ExchangeRatesComponent,
+    CurrencyFormComponent,
+    CurrencyItemComponent,
+  ],
   imports: [
     CommonModule,
     TuiButtonModule,
@@ -17,7 +26,12 @@ import { ExchangeRatesComponent } from './exchange-rates.component';
     TuiSelectModule,
     TuiDataListModule,
     TuiDataListWrapperModule,
+    TuiSvgModule,
   ],
-  exports: [ExchangeRatesComponent, CurrencyFormComponent],
+  exports: [
+    ExchangeRatesComponent,
+    CurrencyFormComponent,
+    CurrencyItemComponent,
+  ],
 })
 export class ExchangeRatesModule {}

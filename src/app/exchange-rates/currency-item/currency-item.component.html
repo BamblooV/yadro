@@ -1,0 +1,27 @@
+<span class="currency-code">
+  {{ item.currencyCode }}
+</span>
+
+<div class="display">
+  <span class="value">
+    {{ item.value | number: '1.2' }}
+  </span>
+  <tui-svg
+    src="{{
+      item.difference === 0
+        ? ''
+        : item.difference > 0
+        ? 'tuiIconChevronUp'
+        : 'tuiIconChevronDown'
+    }}"
+  ></tui-svg>
+  <span
+    [ngClass]="{
+    up: item.difference > 0,
+    down: item.difference < 0,
+  }"
+  >
+    ({{ item.difference | number: '1.2' }})
+  </span>
+</div>
+<span class="delete" (click)="onClick()">X</span>

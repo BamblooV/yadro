@@ -21,4 +21,9 @@
     [currencies]="exchangeCurrencies"
     (selectedCurrency)="addCurrency($event)"
   ></app-currency-form>
+
+  <app-currency-item
+    *ngFor="let currencyItem of currencies"
+    [item]="currencyItem"
+  ></app-currency-item>
 </div>
