@@ -15,4 +15,10 @@
       >{{ expanded ? '-' : '+' }}
     </button>
   </div>
+
+  <app-currency-form
+    *ngIf="expanded"
+    [currencies]="exchangeCurrencies"
+    (selectedCurrency)="addCurrency($event)"
+  ></app-currency-form>
 </div>

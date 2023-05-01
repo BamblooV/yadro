@@ -6,9 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./exchange-rates.component.less'],
 })
 export class ExchangeRatesComponent {
-  expanded = false;
   baseCurrency = 'RUB';
+  exchangeCurrencies = ['CNY', 'JPY', 'TRY'];
+  expanded = false;
   timestamp = Date.now();
+
+  addCurrency(_currecyCode: string): void {
+    this.toggle();
+  }
 
   toggle(): void {
     this.expanded = !this.expanded;
