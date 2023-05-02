@@ -4,7 +4,7 @@
 
 <div class="display">
   <span class="value">
-    {{ item.value | number: '1.2' }}
+    {{ item.value | number : '1.2-2' }}
   </span>
   <tui-svg
     src="{{
@@ -21,7 +21,7 @@
     down: item.difference < 0,
   }"
   >
-    ({{ item.difference | number: '1.2' }})
+    ({{ item.difference | number : '1.2-2' }})
   </span>
 </div>
 <span class="delete" (click)="onClick()">X</span>
