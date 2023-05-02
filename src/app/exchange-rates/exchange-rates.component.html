@@ -4,7 +4,7 @@
   <div class="controls">
     <div>
       <h3>Currency {{ baseCurrency }}</h3>
-      <span>{{ timestamp | date: 'short' }}</span>
+      <span>{{ timestamp | date : 'M/d/yy, h:mm:ss' }}</span>
     </div>
     <button
       [appearance]="expanded ? 'secondary' : 'primary'"
@@ -25,5 +25,6 @@
   <app-currency-item
     *ngFor="let currencyItem of currencies"
     [item]="currencyItem"
+    (itemToDelete)="deleteCurrency($event)"
   ></app-currency-item>
 </div>

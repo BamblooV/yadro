@@ -12,6 +12,8 @@ import { TuiDataListWrapperModule, TuiSelectModule } from '@taiga-ui/kit';
 import { CurrencyFormComponent } from './currency-form/currency-form.component';
 import { CurrencyItemComponent } from './currency-item/currency-item.component';
 import { ExchangeRatesComponent } from './exchange-rates.component';
+import { IExchangeAPIServiceToken } from './interfaces/iexchange-api';
+import { ExchangeAPIService } from './services/exchange-api.service';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,9 @@ import { ExchangeRatesComponent } from './exchange-rates.component';
     ExchangeRatesComponent,
     CurrencyFormComponent,
     CurrencyItemComponent,
+  ],
+  providers: [
+    { provide: IExchangeAPIServiceToken, useClass: ExchangeAPIService },
   ],
 })
 export class ExchangeRatesModule {}
