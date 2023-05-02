@@ -1,4 +1,5 @@
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {
@@ -27,6 +28,7 @@ import { ExchangeRatesComponent } from './exchange-rates.component';
     TuiDataListModule,
     TuiDataListWrapperModule,
     TuiSvgModule,
+    HttpClientModule,
   ],
   exports: [
     ExchangeRatesComponent,
