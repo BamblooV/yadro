@@ -10,7 +10,7 @@ import {
 @Injectable()
 export class ExchangeAPIService implements IExchangeAPI {
   private readonly url = 'https://api.apilayer.com/currency_data/live';
-  private readonly intervalDelay = 60_000;
+  private readonly intervalDelay = 5_000;
 
   private readonly headers = new HttpHeaders().append(
     'apikey',
