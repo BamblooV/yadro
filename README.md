@@ -1,27 +1,19 @@
-# Yadro
+# Тестовое задание
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.5.
+На момент деплоя на бесплатной api осталось 77 запросов. Если вдруг чего - замените `apikey` в `src\app\exchange-rates\services\exchange-api.service.ts`
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Комментарии
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+По заданию нужно изначально отслаживать следующие валюты: USD, EUR, GBR, но GBR нет в api и он был заменен на CAD.
 
-## Build
+Api дает возможность запросить весь список поддерживаемых валют. Согласно требованию нужно сделать возможность добавлять только 3 определенные валюты, но я бы отразил все.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+За 5 секунд курс валюты не сильно меняется, так что разница не всегда наблюдается. Плюс ко всему с сервиса возвращается отношение target к source (USD к RUB) и на возведение в отрицательную степень я могу терять инфу.
 
-## Running unit tests
+В качестве доп. библиотеки использовал TaigaUI. Не очень разумно было подключать ее всю ради пары элементов, но больше не меньше =)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Задание слишком простое, чтобы делать адаптивную верстку. А реализовывать функциональность, которая бы не смотрелась как 5-ая нога, чтобы появилась причина делать адаптивную верстку, я не стал. В качестве доп нагрузки - все линтеры, кроме линтера на стили.
